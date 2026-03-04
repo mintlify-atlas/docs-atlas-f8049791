@@ -1,0 +1,92 @@
+{
+  "projectType": "saas",
+  "projectName": "Product Pulse",
+  "projectDescription": "A configurable community feedback aggregator that scrapes Reddit and YouTube, classifies posts via LLM, detects trending topics, and presents a pulse dashboard for product teams.",
+  "theme": "palm",
+  "primaryColor": "#7C3AED",
+  "lightColor": "#A78BFA",
+  "darkColor": "#5B21B6",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/product-configuration",
+              "features/data-ingestion",
+              "features/llm-classification",
+              "features/trend-analysis",
+              "features/dashboard"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker-compose",
+              "deployment/modal",
+              "deployment/environment-variables"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/adding-products",
+              "guides/configuring-sources",
+              "guides/running-scouts",
+              "guides/understanding-trends"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api/overview",
+              "api/authentication"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/products",
+              "api/feedback",
+              "api/trends",
+              "api/scout-runs"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-source data ingestion from Reddit, YouTube, Google Play Store, and Apple App Store",
+    "LLM-powered feedback classification with Gemini and Ollama support",
+    "Automated trend detection and topic spike analysis",
+    "Real-time dashboard with sentiment tracking and category breakdown",
+    "Scheduled scout runs with APScheduler",
+    "RESTful API for programmatic access"
+  ],
+  "publicApiSurface": [
+    "GET /products - List all active products",
+    "POST /products - Create a new product",
+    "GET /products/{id} - Get product details",
+    "GET /products/{id}/summary - Get pulse overview",
+    "GET /products/{id}/feedback - List classified feedback",
+    "GET /products/{id}/trends - Get trending topics",
+    "POST /scout/trigger - Trigger a scout run",
+    "GET /scout/runs - List scout run history"
+  ]
+}
